@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/drawable/button_style.xml" value="0.194" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/drawable/edit_text_style.xml" value="0.194" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_apointment_nav.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_home_nav.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_login.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_profile.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_sched_nav.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_apointment_nav.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_home_nav.xml" value="0.25" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_login.xml" value="0.22" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_profile.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_registration.xml" value="0.1" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_shed_nav.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/menu/admin_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/menu/users_menu.xml" value="0.209375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
