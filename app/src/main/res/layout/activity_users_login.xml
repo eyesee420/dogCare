@@ -9,11 +9,12 @@
     tools:context=".users_login">
 
     <TextView
+
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Welcome to DogCare"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textAppearance="@style/MaterialAlertDialog.Material3.Body.Text"
         android:textColor="@color/white"
         android:textSize="23dp"
         android:textStyle="bold"

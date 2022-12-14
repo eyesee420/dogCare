@@ -19,6 +19,7 @@
                 android:id="@+id/top_nav"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:elevation="5dp"
                 android:background="@color/brown">
 
                 <TextView
@@ -67,14 +68,15 @@
 
             <TextView
                 android:id="@+id/text"
+                android:theme="@style/Theme.Material3.Light.NoActionBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/image_slider"
                 android:layout_marginTop="10dp"
                 android:paddingStart="5dp"
+                android:textColor="@color/brown"
                 android:text="The Responsible Pet Owner's Checklist \n for Taking Care of a Dogs"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="18dp"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                 android:textStyle="bold">
 
             </TextView>
