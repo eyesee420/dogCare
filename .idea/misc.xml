@@ -3,20 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/drawable-v24/button_style_accept.xml" value="0.212" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/drawable-v24/button_style_logout.xml" value="0.1435" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/drawable-v24/button_style_white.xml" value="0.1435" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/drawable-v24/edit_text_style_login_reg.xml" value="0.1435" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/drawable/button_style.xml" value="0.194" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/drawable/edit_text_style.xml" value="0.194" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.163" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_add_post.xml" value="0.190625" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_apointment_nav.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_confirmed_appointments.xml" value="0.1" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_home_nav.xml" value="0.209375" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_login.xml" value="0.209375" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_profile.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_request_appointments.xml" value="0.2046875" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_admin_sched_nav.xml" value="0.209375" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_main.xml" value="0.209375" />
-        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_apointment_nav.xml" value="0.209375" />
-        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_home_nav.xml" value="0.22" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_set_appointment.xml" value="0.190625" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_apointment_nav.xml" value="0.25" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_home_nav.xml" value="0.18" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_login.xml" value="0.22" />
-        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_profile.xml" value="0.209375" />
-        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_registration.xml" value="0.1" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_my_appointments_nav.xml" value="0.2046875" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_profile.xml" value="0.2" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_registration.xml" value="0.25" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_set_appointments_nav.xml" value="0.2046875" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/activity_users_shed_nav.xml" value="0.209375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/item_appointments.xml" value="0.25" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/item_appointments_admin.xml" value="0.2046875" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/item_appointments_admin_Confirmed.xml" value="0.2046875" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/item_appointments_confirmed_admin.xml" value="0.2046875" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/item_appointments_general.xml" value="0.2046875" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/layout/item_blog.xml" value="0.18" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/menu/admin_menu.xml" value="0.209375" />
         <entry key="..\:/Users/me/AndroidStudioProjects/dogCare/app/src/main/res/menu/users_menu.xml" value="0.209375" />
       </map>

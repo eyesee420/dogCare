@@ -7,12 +7,30 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon_paw1"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/as"
         android:supportsRtl="true"
         android:theme="@style/Theme.DogCare"
         tools:targetApi="31">
+        <activity
+            android:name=".set_appointment"
+            android:exported="false" />
+        <activity
+            android:name=".admin_add_post"
+            android:exported="false" />
+        <activity
+            android:name=".users_setAppointments_nav"
+            android:exported="false" />
+        <activity
+            android:name=".users_myAppointments_nav"
+            android:exported="false" />
+        <activity
+            android:name=".admin_confirmed_appointments"
+            android:exported="false" />
+        <activity
+            android:name=".admin_request_appointments"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -29,19 +47,7 @@
             android:name=".admin_home_nav"
             android:exported="false" />
         <activity
-            android:name=".admin_apointment_nav"
-            android:exported="false" />
-        <activity
-            android:name=".admin_sched_nav"
-            android:exported="false" />
-        <activity
             android:name=".users_profile"
-            android:exported="false" />
-        <activity
-            android:name=".users_apointment_nav"
-            android:exported="false" />
-        <activity
-            android:name=".users_shed_nav"
             android:exported="false" />
         <activity
             android:name=".users_home_nav"
@@ -56,5 +62,5 @@
             </intent-filter>
         </activity>
     </application>
-<!--    android:name=".MainActivity"-->
+
 </manifest>

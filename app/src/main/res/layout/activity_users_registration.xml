@@ -47,7 +47,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
     <EditText
-        android:background="@drawable/edit_text_style"
+        android:id="@+id/full_name"
+        android:background="@drawable/edit_text_style_login_reg"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Full name "
@@ -59,23 +60,11 @@
         android:textSize="18dp"
         android:textColor="@color/white"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
+
     <EditText
+        android:id="@+id/phone_number"
         android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text_style"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Age"
-        android:paddingStart="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
-        android:textSize="18dp"
-        android:textColor="@color/white"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
-    <EditText
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text_style"
+        android:background="@drawable/edit_text_style_login_reg"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Contact Number"
@@ -88,8 +77,25 @@
         android:textColor="@color/white"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
     <EditText
+        android:id="@+id/current_address"
         android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text_style"
+        android:background="@drawable/edit_text_style_login_reg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Current Address"
+        android:paddingStart="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
+
+    <EditText
+        android:id="@+id/email_address"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text_style_login_reg"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Email Address"
@@ -102,8 +108,9 @@
         android:textColor="@color/white"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
     <EditText
+        android:id="@+id/passWord"
         android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text_style"
+        android:background="@drawable/edit_text_style_login_reg"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Password"
@@ -113,6 +120,7 @@
         android:textColorHint="@color/white"
         android:textStyle="bold"
         android:textSize="18dp"
+        android:inputType="textPassword"
         android:textColor="@color/white"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
 
@@ -121,14 +129,14 @@
 
 
             <Button
-                android:id="@+id/login_button"
+                android:id="@+id/register_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/line1"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/button_style"
+                android:background="@drawable/button_style_white"
                 android:text="register "
                 android:textColor="@color/grey_font"
                 android:textStyle="bold">
@@ -136,10 +144,11 @@
             </Button>
 
             <Button
+                android:id="@+id/back_btn"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/login_button"
+                android:layout_below="@id/register_button"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
@@ -151,4 +160,11 @@
 
     </androidx.cardview.widget.CardView>
     </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"></ProgressBar>
 </RelativeLayout>

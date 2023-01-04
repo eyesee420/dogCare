@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_marginBottom="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_marginTop="5dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/dog1"></ImageView>
+
+        <TextView
+            android:id="@+id/tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/image_view"
+            android:text="General Dog Care"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tittle"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/image_view"
+            android:text="Posted@ dec"
+            android:textColor="@color/grey_font"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="14dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+<!--        <TextView-->
+<!--            android:id="@+id/discriptions"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/calendar"-->
+<!--            android:layout_toRightOf="@+id/image_view"-->
+<!--            android:text="Are you a new dog paren, or looking to brush -->
+<!--            up on your pet skills? Here Are our tips for keeping your dog happy-->
+<!--             and healthy."></TextView>-->
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/discriptions"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calendar"
+            android:layout_toRightOf="@+id/image_view"
+            app:trimExpandedText="view more"
+            app:trimCollapsedText="view less"
+            app:trimMode="trimModeLine"
+            app:trimLines="3"
+            app:colorClickableText="@color/brown"
+            android:text="Are you a new dog paren, or looking to brush up on your pet skills? Here Are our tips for keeping your dog happyand healthy."/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

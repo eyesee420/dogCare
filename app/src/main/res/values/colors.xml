@@ -10,4 +10,8 @@
 
     <color name="brown">#FF5722</color>
 
+    <color name="lightbrown">#FFCC80</color>
+    <color name="green">#53E88B</color>
+    <color name="red">#D50000</color>
+
 </resources>

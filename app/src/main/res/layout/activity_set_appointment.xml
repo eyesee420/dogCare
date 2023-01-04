@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".users_shed_nav">
+    tools:context=".set_appointment">
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_nav"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/brown">
+        android:background="@color/brown"
+        android:elevation="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -38,75 +41,103 @@
         </ImageView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <LinearLayout
         android:id="@+id/line1"
         android:layout_below="@id/top_nav"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
 
         <EditText
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Full name of Applicant "></EditText>
-        <EditText
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Dog Name">
-        </EditText>
-        <EditText
+            android:id="@+id/full_name"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Full name of Applicant ">
+
         </EditText>
         <EditText
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Dog Type">
-        </EditText>
-        <EditText
+            android:id="@+id/cotntact_number"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contact Number">
         </EditText>
+        <EditText
+            android:id="@+id/dog_name"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dog Name">
+        </EditText>
+
 
         <EditText
+            android:id="@+id/dog_type"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dog Type">
+        </EditText>
+
+
+        <EditText
+            android:id="@+id/dog_symptoms"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             android:hint="Dog symptoms">
         </EditText>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a Date and Time For Schedule">
 
+        </TextView>
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="DD/MM/YYYY"
+            android:inputType="date"
+            android:focusable="false"/>
+
+        <EditText
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="00:00"
+            android:inputType="time"
+            android:focusable="false"/>
     </LinearLayout>
 
     <Button
-        android:layout_marginTop="20dp"
+        android:id="@+id/apply_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="apply schedule"
-        android:layout_below="@+id/line1"></Button>
-
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_users"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelVisibilityMode="labeled"
         android:layout_alignParentBottom="true"
-        app:itemIconTint="@color/brown"
-        app:itemTextColor="@color/brown"
-        android:background="@color/white"
-        app:menu="@menu/users_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:elevation="5dp"
+        android:background="@drawable/button_style_accept"
+        android:text="Apply Appointment"
+        android:textColor="@color/white"
+        android:textStyle="bold"></Button>
 
+<ProgressBar
+    android:id="@+id/proggress"
+    android:visibility="invisible"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    ></ProgressBar>
 
 </RelativeLayout>

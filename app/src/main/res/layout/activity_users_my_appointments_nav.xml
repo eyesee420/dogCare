@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".users_apointment_nav">
+    tools:context=".users_myAppointments_nav">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_nav"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/brown">
+        android:background="@color/brown"
+        android:elevation="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,32 +40,25 @@
         </ImageView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-    <CalendarView
-        android:id="@+id/calendar"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view"
         android:layout_below="@id/top_nav"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></CalendarView>
-
-
-
-    <TextView
+        android:layout_above="@id/bottom_navigation_users"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Detailed Appointments"
-        android:paddingStart="20dp"
-        android:textSize="20dp"
-        android:layout_below="@id/calendar"></TextView>
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_users"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:itemIconTint="@color/brown"
-        app:itemTextColor="@color/brown"
         android:background="@color/white"
+        app:itemIconTint="@color/brown"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView"
+        app:itemTextColor="@color/brown"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/users_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
 

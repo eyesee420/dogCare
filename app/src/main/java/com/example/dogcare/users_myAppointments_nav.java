@@ -9,47 +9,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.denzcoskun.imageslider.ImageSlider;
-import com.denzcoskun.imageslider.constants.ScaleTypes;
-import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.dogcare.adapters.apointments_adapter;
-import com.example.dogcare.adapters.bologpost_adapter;
 import com.example.dogcare.models.apointments_model;
-import com.example.dogcare.models.blogs_post_model;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-import java.util.ArrayList;
-import java.util.List;
+public class users_myAppointments_nav extends AppCompatActivity {
 
-public class users_home_nav extends AppCompatActivity {
-    BottomNavigationView bottom_navigation;
-    RecyclerView recyclerView;
-
-    private bologpost_adapter adapter;
+    private apointments_adapter adapter;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
+    RecyclerView recycle_view;
+    BottomNavigationView bottom_navigation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_users_home_nav);
+        setContentView(R.layout.activity_users_my_appointments_nav);
 
-        recyclerView = findViewById(R.id.recycle_view);
+
+        recycle_view =findViewById(R.id.recycle_view);
         bottom_navigation = findViewById(R.id.bottom_navigation_users);
-        bottom_navigation.setSelectedItemId(R.id.nav_home);
-
-        ImageSlider imageSlider = findViewById(R.id.image_slider);
-        List<SlideModel> slideModels = new ArrayList<>();
-
-        slideModels.add(new SlideModel(R.drawable.slider_dog1, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.slider_dog2, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.slider_dog3, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.slider_dog4, ScaleTypes.FIT));
-        imageSlider.setImageList(slideModels, ScaleTypes.FIT);
-
+        bottom_navigation.setSelectedItemId(R.id.nav_myAppointments);
 
         bottom_navigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -57,6 +43,10 @@ public class users_home_nav extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.nav_home:
+                        startActivity(new Intent(getApplicationContext(), users_home_nav.class));
+                        overridePendingTransition(0, 0);
+                        finish();
+
                         return true;
 
                     case R.id.nav_setAppointment:
@@ -66,9 +56,6 @@ public class users_home_nav extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_myAppointments:
-                        startActivity(new Intent(getApplicationContext(), users_myAppointments_nav.class));
-                        overridePendingTransition(0, 0);
-                        finish();
                         return true;
 
                     case R.id.nav_profile:
@@ -81,25 +68,28 @@ public class users_home_nav extends AppCompatActivity {
             }
         });
 
-        recyclerview();
+        recycleview();
 
 
     }
 
-    private void recyclerview() {
-
-        Query query = db.collection("blogs and post");
-
-        FirestoreRecyclerOptions<blogs_post_model> options = new FirestoreRecyclerOptions.Builder<blogs_post_model>()
-                .setQuery(query, blogs_post_model.class).build();
+    private void recycleview() {
 
 
-        adapter = new bologpost_adapter(options);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        recyclerView.setAdapter(adapter);
+        FirebaseUser userid = mAuth.getCurrentUser();
+        Query query = db.collection("appointments").document(userid.getUid())
+                .collection("my sched");
+
+        FirestoreRecyclerOptions<apointments_model> options = new FirestoreRecyclerOptions.Builder<apointments_model>()
+                .setQuery(query, apointments_model.class).build();
+
+
+
+        adapter = new apointments_adapter(options);
+        recycle_view.setHasFixedSize(true);
+        recycle_view.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recycle_view.setAdapter(adapter);
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -111,10 +101,12 @@ public class users_home_nav extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
+
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(users_home_nav.this , users_login.class));
+        super.onBackPressed();
+
+        startActivity(new Intent(users_myAppointments_nav.this , users_home_nav.class));
         finish();
     }
-
 }

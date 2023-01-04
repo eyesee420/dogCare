@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin_sched_nav">
-
+    tools:context=".users_setAppointments_nav">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_nav"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/brown">
+        android:background="@color/brown"
+        android:elevation="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,6 +28,7 @@
 
         </TextView>
 
+
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
@@ -40,33 +41,61 @@
         </ImageView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_nav"
+        android:paddingStart="5dp"
+        android:text="General List Of Appointments"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textColor="@color/brown"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18dp"
+        android:textStyle="bold"></TextView>
+
+<!--<ImageView-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:src="@drawable/appointment"-->
+<!--    android:layout_centerInParent="true">-->
+<!--    -->
+<!--</ImageView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation_users"
+        android:layout_below="@id/text"></androidx.recyclerview.widget.RecyclerView>
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/set_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation_users"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="20dp"
+        app:backgroundTint="@color/brown"
         android:layout_marginBottom="20dp"
-        android:layout_above="@id/bottom_navigation_admin"
         android:src="@drawable/ic_baseline_add_24">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Schedules"
-        android:textSize="30dp"
-        android:gravity="center"></TextView>
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_admin"
+        android:id="@+id/bottom_navigation_users"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:itemIconTint="@color/brown"
-        app:itemTextColor="@color/brown"
         android:background="@color/white"
+        app:itemIconTint="@color/brown"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView"
+        app:itemTextColor="@color/brown"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/admin_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
+        app:menu="@menu/users_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </RelativeLayout>

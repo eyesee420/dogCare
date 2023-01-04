@@ -6,21 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".users_home_nav">
 
-    <ScrollView
+<ScrollView
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/top_nav"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:elevation="5dp"
-                android:background="@color/brown">
+                android:background="@color/brown"
+                android:elevation="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -50,257 +54,72 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            <com.denzcoskun.imageslider.ImageSlider
-                android:id="@+id/image_slider"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_below="@id/top_nav"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="@android:color/white"
-                app:iss_auto_cycle="true"
-                app:iss_corner_radius="8"
-                app:iss_delay="0"
-                app:iss_error_image="@color/purple_700"
-                app:iss_period="2000"
-                app:iss_placeholder="@android:color/darker_gray"></com.denzcoskun.imageslider.ImageSlider>
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
 
-            <TextView
-                android:id="@+id/text"
-                android:theme="@style/Theme.Material3.Light.NoActionBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/image_slider"
-                android:layout_marginTop="10dp"
-                android:paddingStart="5dp"
-                android:textColor="@color/brown"
-                android:text="The Responsible Pet Owner's Checklist \n for Taking Care of a Dogs"
-                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textStyle="bold">
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/top_nav"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/white"
+            app:iss_auto_cycle="true"
+            app:iss_corner_radius="8"
+            app:iss_delay="0"
+            app:iss_error_image="@color/purple_700"
+            app:iss_period="2000"
+            app:iss_placeholder="@android:color/darker_gray"></com.denzcoskun.imageslider.ImageSlider>
 
-            </TextView>
-
-
-            <LinearLayout
-
-                android:layout_marginBottom="200dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp">
-
-                    <ImageView
-                        android:id="@+id/image1"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/dog1"></ImageView>
-
-                    <TextView
-                        android:id="@+id/t1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_toRightOf="@+id/image1"
-                        android:text="General Dog Care"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="16dp"
-                        android:textStyle="bold">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/tt1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/t1"
-                        android:layout_toRightOf="@+id/image1"
-                        android:text="Are you a new dog paren, or looking to brush up on your pet skills? Here Are our tips for keeping your dog happy and healthy."></TextView>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp">
-
-                    <ImageView
-                        android:id="@+id/image2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/dog2"></ImageView>
-
-                    <TextView
-                        android:id="@+id/t2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_toRightOf="@+id/image2"
-                        android:text="Dogs and Babies"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="16dp"
-                        android:textStyle="bold">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/tt2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/t2"
-                        android:layout_toRightOf="@+id/image2"
-                        android:text="Tips for helping your new baby or toddler exist in harmony with your family's pup">
-
-                    </TextView>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp">
-
-                    <ImageView
-                        android:id="@+id/image3"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/dog4"></ImageView>
-
-                    <TextView
-                        android:id="@+id/t3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_toRightOf="@+id/image3"
-                        android:text="Dog Nutrition tips"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="16dp"
-                        android:textStyle="bold">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/ttt3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/t3"
-                        android:layout_toRightOf="@+id/image3"
-                        android:text="Check out importan nutrition tips to keep your puppy, adult dog or senior dog healthy">
-
-                    </TextView>
-
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp">
-
-                    <ImageView
-                        android:id="@+id/image4"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/dog5"></ImageView>
-
-                    <TextView
-                        android:id="@+id/t4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_toRightOf="@+id/image4"
-                        android:text="Dog Grooming Tips"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="16dp"
-                        android:textStyle="bold">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/ttt4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/t4"
-                        android:layout_toRightOf="@+id/image4"
-                        android:text="From dental Care to bath time, read our handy guide to keeping your dog looking its best">
-
-                    </TextView>
-
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp">
-
-                    <ImageView
-                        android:id="@+id/image5"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/dog3jpg"></ImageView>
-
-                    <TextView
-                        android:id="@+id/t5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_toRightOf="@+id/image5"
-                        android:text="Common Dog Diseases"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="16dp"
-                        android:textStyle="bold">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/ttt5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/t5"
-                        android:layout_toRightOf="@+id/image5"
-                        android:text="Learn more about the sysmptoms of and treatments for illness that frequently impact dogs.">
-
-                    </TextView>
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
-        </RelativeLayout>
-    </ScrollView>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_users"
+    <TextView
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:itemIconTint="@color/brown"
-        app:itemTextColor="@color/brown"
-        android:background="@color/white"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/users_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+        android:layout_below="@id/image_slider"
+        android:layout_marginTop="10dp"
+        android:paddingStart="5dp"
+        android:text="The Responsible Pet Owner's Checklist for Taking Care of a Dogs"
+        android:textColor="@color/brown"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18dp"
+
+        >
+
+    </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_below="@id/text"></androidx.recyclerview.widget.RecyclerView>
 
 
-</RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/recycle_view"
+            android:layout_marginBottom="50dp"></View>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_users"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            app:itemIconTint="@color/brown"
+            app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+            app:itemTextAppearanceInactive="@style/BottomNavigationView"
+
+            app:itemTextColor="@color/brown"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/users_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </RelativeLayout>

@@ -8,19 +8,19 @@
     </item>
 
     <item
-        android:id="@+id/nav_set_Schedule"
+        android:id="@+id/nav_reqAppointments"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_calendar_month_24"
-        android:title="Set Schedule">
+        android:title="Request">
 
     </item>
 
 
     <item
-        android:id="@+id/nav_appointments"
+        android:id="@+id/nav_confirmed_Appointments"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_insert_invitation_24"
-        android:title="Appointments">
+        android:title="Confirmed">
     </item>
 
 

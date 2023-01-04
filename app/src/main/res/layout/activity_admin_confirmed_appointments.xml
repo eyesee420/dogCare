@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin_apointment_nav">
+    tools:context=".admin_confirmed_appointments">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,22 +40,14 @@
         </ImageView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_above="@id/bottom_navigation_admin"
-        android:src="@drawable/ic_baseline_add_24">
-
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Appointments"
-        android:textSize="30dp"
-        android:gravity="center"></TextView>
+        android:layout_above="@id/bottom_navigation_admin"
+        android:layout_below="@id/top_nav"></androidx.recyclerview.widget.RecyclerView>
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_admin"
         android:layout_width="match_parent"

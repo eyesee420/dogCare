@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bb3"
     tools:context=".admin_profile">
 
 
@@ -19,6 +18,7 @@
 
 
             <Button
+                android:id="@+id/back_btn"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="5dp"
@@ -44,26 +44,21 @@
                 </ImageView>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@id/top_nav"
+                app:cardBackgroundColor="#FFF3E0">
 
-            <ToggleButton
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:textOff=" "
-                android:textOn=" "
-                android:layout_above="@+id/line1"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/ic_baseline_edit_24"></ToggleButton>
-
+            </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/card1"
                 android:layout_below="@id/top_nav"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="30dp"
                 android:layout_centerHorizontal="true"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 app:cardCornerRadius="90dp">
                 <androidx.cardview.widget.CardView
                     android:layout_margin="5dp"
@@ -74,7 +69,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/dog2"
+                        android:src="@drawable/account"
                         ></ImageView>
 
                 </androidx.cardview.widget.CardView>
@@ -90,94 +85,87 @@
                 android:orientation="vertical"
                 >
                 <EditText
+                    android:id="@+id/full_name"
                     android:background="@drawable/edit_text_style"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="Full name "
+                    android:textColor="@color/grey_font"
                     android:paddingStart="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:textColorHint="@color/white"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+
                     android:textStyle="bold"
                     android:textSize="18dp"
-                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
+
                 <EditText
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edit_text_style"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="Age"
-                    android:paddingStart="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:textColorHint="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="18dp"
-                    android:textColor="@color/white"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
-                <EditText
+                    android:id="@+id/contact_number"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/edit_text_style"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="Contact Number"
                     android:paddingStart="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:textColorHint="@color/white"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:textColor="@color/grey_font"
                     android:textStyle="bold"
                     android:textSize="18dp"
-                    android:textColor="@color/white"
+
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
                 <EditText
+                    android:id="@+id/current_address"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edit_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Current Address"
+                    android:paddingStart="10dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/grey_font"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
+
+                <EditText
+                    android:enabled="false"
+                    android:id="@+id/email_address"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/edit_text_style"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="Email Address"
                     android:paddingStart="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:textColorHint="@color/white"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:textColor="@color/grey_font"
                     android:textStyle="bold"
                     android:textSize="18dp"
-                    android:textColor="@color/white"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
-                <EditText
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edit_text_style"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="Password"
-                    android:paddingStart="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:textColorHint="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="18dp"
-                    android:textColor="@color/white"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
 
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"></EditText>
 
 
             </LinearLayout>
 
+
             <Button
-                android:id="@+id/login_button"
+                android:id="@+id/logout_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/line1"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/button_style"
-                android:text="update profile"
+                android:layout_marginEnd="30dp"
                 android:layout_marginBottom="100dp"
-                android:textColor="@color/grey_font"
+                android:background="@drawable/button_style_logout"
+                android:text="Logout"
+                android:textColor="@color/white"
                 android:textStyle="bold">
 
             </Button>
+
 
         </RelativeLayout>
     </ScrollView>
